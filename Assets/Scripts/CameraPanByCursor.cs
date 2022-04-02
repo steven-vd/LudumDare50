@@ -9,6 +9,10 @@ public class CameraPanByCursor : MonoBehaviour {
     [HideInInspector]
     public float desiredY;
 
+    private void Awake() {
+        desiredY = minY;
+    }
+
     void Update() {
         if (Input.mousePosition.y > Screen.height - edgePanDistance) {
             desiredY = maxY;
