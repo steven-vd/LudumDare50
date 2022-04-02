@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Citizen
+    uniqueID: 215632953
+    locked: 0
+  - name: Desk
+    uniqueID: 3202315075
+    locked: 0
+  - name: Forms
+    uniqueID: 4244473539
+    locked: 0
