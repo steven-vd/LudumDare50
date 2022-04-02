@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(LayerManager))]
 public class DragnDrop : MonoBehaviour {
 
     [Tooltip("Defaults to gameobject with name 'Desk'")]
@@ -32,6 +34,8 @@ public class DragnDrop : MonoBehaviour {
     }
 
     private void OnMouseDrag() {
+        GetComponent<LayerManager>().ToFront();
+
         Vector2 mousePos = Master.Instance.MainCamera.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(
             mousePos.x + mousePosDeltaOnInitiateDrag.x,
