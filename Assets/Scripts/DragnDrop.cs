@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(LayerManager))]
 public class DragnDrop : MonoBehaviour {
 
