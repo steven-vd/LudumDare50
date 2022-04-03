@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-[RequireComponent(typeof(LayerManager))]
+[RequireComponent(typeof(SetZByY))]
 public class DragnDrop : MonoBehaviour {
 
     [Tooltip("Defaults to gameobject with name 'Desk'")]
@@ -34,7 +34,7 @@ public class DragnDrop : MonoBehaviour {
     }
 
     private void OnMouseDrag() {
-        GetComponent<LayerManager>().ToFront();
+        GetComponent<SetZByY>().UpdateZ();
 
         Vector2 mousePos = Master.Instance.MainCamera.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(
