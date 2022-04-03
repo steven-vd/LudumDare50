@@ -27,17 +27,17 @@ RectTransform:
   m_GameObject: {fileID: 638833772730602893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.13947718, y: 0.09862021, z: 0.13947718}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4584540281246082580}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 13.790001, y: -51.101997}
-  m_SizeDelta: {x: 197.04999, y: 30.1}
-  m_Pivot: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 90.5, y: -151.9}
+  m_SizeDelta: {x: 90.5, y: 13.3}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &8583745054565607669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 9.8
+  m_fontSizeBase: 9.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -162,17 +162,17 @@ RectTransform:
   m_GameObject: {fileID: 1587649293031092489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1394772, y: 0.098620236, z: 0.1394772}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4584540281246082580}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 13.46, y: -39.3}
-  m_SizeDelta: {x: 197.04999, y: 30.1}
-  m_Pivot: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 89.1, y: -115.5}
+  m_SizeDelta: {x: 93.4, y: 17.2}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &6971391819760083467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -228,8 +228,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 9.8
+  m_fontSizeBase: 9.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -297,17 +297,17 @@ RectTransform:
   m_GameObject: {fileID: 4537375037793290277}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.13947718, y: 0.09862021, z: 0.13947718}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4584540281246082580}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.8749962, y: -59.782997}
-  m_SizeDelta: {x: 414.0625, y: 97.2}
-  m_Pivot: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 26.2, y: -176.8}
+  m_SizeDelta: {x: 154.1, y: 31.3}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &3840968508653572078
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -364,8 +364,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 7.9
+  m_fontSizeBase: 7.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -433,17 +433,17 @@ RectTransform:
   m_GameObject: {fileID: 6021340429882221334}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.13947718, y: 0.09862021, z: 0.13947718}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4584540281246082580}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 13.79, y: -45.3}
-  m_SizeDelta: {x: 197.04999, y: 30.1}
-  m_Pivot: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 89.1, y: -133.3}
+  m_SizeDelta: {x: 90.7, y: 11.1}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &370801295969468721
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -499,8 +499,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 9.8
+  m_fontSizeBase: 9.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -668,6 +668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Form_Finished
       objectReference: {fileID: 0}
+    - target: {fileID: 9186429109730409956, guid: 16d13c785381bc001b67461f60fffca8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 24425fafb241f7546ab560578aea8a28, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16d13c785381bc001b67461f60fffca8, type: 3}
 --- !u!224 &4584540281246082580 stripped
