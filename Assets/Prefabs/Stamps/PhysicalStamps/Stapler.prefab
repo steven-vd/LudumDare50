@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebb1a7c9830e4daa7bb39c6070227f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfStaple: {fileID: 0}
+  pfStaple: {fileID: 4526238343581199182, guid: 94eb8f6624b128ca288212a796061f42, type: 3}
 --- !u!1 &850584144968466395
 GameObject:
   m_ObjectHideFlags: 0
