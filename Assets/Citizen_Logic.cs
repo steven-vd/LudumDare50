@@ -6,12 +6,12 @@ public class Citizen_Logic : MonoBehaviour
 {
     private GameObject currentCitizen;
     private GameObject nextCitizen;
-    
 
     // Start is called before the first frame update
     void Start() {
     nextCitizen = transform.GetChild(0).gameObject;
     WalkUp();
+    
     }
 
     // Update is called once per frame
@@ -21,9 +21,12 @@ public class Citizen_Logic : MonoBehaviour
         if(nextCitizen.transform.position.x < 0.0f){
         nextCitizen.transform.position = new Vector3(nextCitizen.transform.position.x+300.0f* Time.deltaTime, nextCitizen.transform.position.y, nextCitizen.transform.position.z); 
         }
-        else
+        else{
         UnLoadPackage();
-    
+        new WaitForSeconds(1);
+        WalkAway(false);
+        }
+
         if(currentCitizen != null)
         if(currentCitizen.transform.position.x < 1500.0f){
         currentCitizen.transform.position = new Vector3(currentCitizen.transform.position.x+400.0f* Time.deltaTime, currentCitizen.transform.position.y, currentCitizen.transform.position.z); 
@@ -31,7 +34,6 @@ public class Citizen_Logic : MonoBehaviour
         else
         Destroy(currentCitizen);
         
-
 
     }
 
@@ -42,6 +44,7 @@ public class Citizen_Logic : MonoBehaviour
     }
 
     public void WalkAway(bool delayed){
+        //GetComponent<Animator>().Play("MechAnimation", 0);
 
         DeletePackage();
         currentCitizen = nextCitizen;
@@ -54,13 +57,13 @@ public class Citizen_Logic : MonoBehaviour
 
     public void UnLoadPackage(){
 
-
+        transform.parent.GetChild(1).GetChild(0).gameObject.SetActive(true);
         
     }
 
     public void DeletePackage(){
         
-        
+        Destroy(transform.parent.GetChild(1).GetChild(0).gameObject);
     }
 
 
