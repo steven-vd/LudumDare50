@@ -1,7 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
-[RequireComponent(typeof(SetZByY))]
 public class DragnDrop : MonoBehaviour {
 
     [Tooltip("Defaults to gameobject with name 'Desk'")]
@@ -35,11 +34,28 @@ public class DragnDrop : MonoBehaviour {
         }
     }
 
-    private void OnMouseDown() {
+    public void BeginDrag() {
         mousePosDeltaOnInitiateDrag = transform.position - Master.Instance.MainCamera.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    private void OnMouseDrag() {
+    private void OnMouseDown() {
+        BeginDrag();
+
+        Stapleable stapleable = GetComponent<Stapleable>();
+        if (stapleable == null) {
+            return;
+        }
+
+        List<Stapleable> allLinked = new List<Stapleable>();
+        stapleable.GetAllLinked(allLinked);
+        foreach (Stapleable s in allLinked) {
+            if (s.transform != this.transform) {
+                s.GetComponent<DragnDrop>().BeginDrag();
+            }
+        }
+    }
+
+    public void Drag() {
         GetComponent<SetZByY>().UpdateZ();
 
         Vector2 mousePos = Master.Instance.MainCamera.ScreenToWorldPoint(Input.mousePosition);
@@ -52,6 +68,23 @@ public class DragnDrop : MonoBehaviour {
         //Check if still on surface
         if (IsInLegalPosition()) {
             lastLegalPosition = transform.position;
+        }
+    }
+
+    private void OnMouseDrag() {
+        Drag();
+
+        Stapleable stapleable = GetComponent<Stapleable>();
+        if (stapleable == null) {
+            return;
+        }
+
+        List<Stapleable> allLinked = new List<Stapleable>();
+        stapleable.GetAllLinked(allLinked);
+        foreach (Stapleable s in allLinked) {
+            if (s.transform != this.transform) {
+                s.GetComponent<DragnDrop>().Drag();
+            }
         }
     }
 

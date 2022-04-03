@@ -5,7 +5,7 @@ public class Stamp : MonoBehaviour {
 
     public GameObject pfStamp;
 
-    private void OnMouseOver() {
+    protected virtual void OnMouseOver() {
         if (Input.GetMouseButtonDown(1)) {
             ContactFilter2D cf2d = new ContactFilter2D();
             cf2d.useTriggers = true;

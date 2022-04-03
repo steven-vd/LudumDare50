@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 6005558246333215227}
   - component: {fileID: 6335348288709074669}
   - component: {fileID: 2788326524819102125}
+  - component: {fileID: 382514966110763251}
   m_Layer: 8
   m_Name: Form
   m_TagString: Untagged
@@ -352,3 +353,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tfStampImageParent: {fileID: 8242719344972853276}
+--- !u!114 &382514966110763251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005558246333215207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e38f793be0ffd8ddb6ae30382c259ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tfStampImageParent: {fileID: 8242719344972853276}
+  linked: []
