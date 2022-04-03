@@ -20,7 +20,7 @@ public class DragnDrop : MonoBehaviour {
     }
 
     public bool IsInLegalPosition() {
-        return transform.position.y + transform.lossyScale.y / 2 < Surface.transform.position.y + Surface.transform.lossyScale.y / 2;
+        return transform.position.y + transform.lossyScale.y / 2 < (Surface.transform as RectTransform).anchoredPosition.y + (Surface.transform as RectTransform).rect.height * Surface.transform.lossyScale.y / 2;
     }
 
     private void Update() {
