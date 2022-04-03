@@ -5,11 +5,12 @@ public class Stamp : MonoBehaviour {
 
     public GameObject pfStamp;
 
-    protected virtual void OnMouseOver() {
+    private void OnMouseOver() {
         if (Input.GetMouseButtonDown(1)) {
             ContactFilter2D cf2d = new ContactFilter2D();
             cf2d.useTriggers = true;
             cf2d.layerMask = 1 << 8 | 1 << 9;
+            cf2d.useLayerMask = true;
 
             List<Collider2D> forms = new List<Collider2D>();
             if (GetComponent<Collider2D>().OverlapCollider(cf2d, forms) == 0) {

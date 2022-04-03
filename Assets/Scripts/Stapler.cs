@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stapler : Stamp {
+public class Stapler : MonoBehaviour {
 
-    protected override void OnMouseOver() {
+    public GameObject pfStaple;
+
+    private void OnMouseOver() {
         if (Input.GetMouseButtonDown(1)) {
             ContactFilter2D cf2d = new ContactFilter2D();
             cf2d.useTriggers = true;
@@ -31,7 +33,7 @@ public class Stapler : Stamp {
                     foremost = stapleable.transform;
                 }
             }
-            foremost.GetComponent<Stapleable>().Stamp(pfStamp, transform.position, transform.rotation);
+            foremost.GetComponent<Stapleable>().Staple(pfStaple, transform.position, transform.rotation);
         }
     }
 

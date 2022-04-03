@@ -365,5 +365,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e38f793be0ffd8ddb6ae30382c259ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tfStampImageParent: {fileID: 8242719344972853276}
+  tfStapleImageParent: {fileID: 8242719344972853276}
   linked: []

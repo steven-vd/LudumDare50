@@ -18,14 +18,27 @@ public class DragnDrop : MonoBehaviour {
         }
     }
 
-    public bool IsInLegalPosition() {
+    //FIXME
+    public bool IsInLegalPosition(bool checkRecursive = true) {
+        bool inLegalPosition = true;
         if (transform.GetChild(0).transform is RectTransform) {
-            return transform.position.y + (transform.GetChild(0).transform as RectTransform).rect.height * transform.GetChild(0).lossyScale.y / 2 <
+            inLegalPosition = transform.position.y + (transform.GetChild(0).transform as RectTransform).rect.height * transform.GetChild(0).lossyScale.y / 2 <
             (Surface.transform as RectTransform).anchoredPosition.y + (Surface.transform as RectTransform).rect.height * Surface.transform.lossyScale.y / 2;
         } else {
-            return transform.position.y + transform.GetChild(0).lossyScale.y / 2 <
+            inLegalPosition = transform.position.y + transform.GetChild(0).lossyScale.y / 2 <
             (Surface.transform as RectTransform).anchoredPosition.y + (Surface.transform as RectTransform).rect.height * Surface.transform.lossyScale.y / 2;
         }
+        if (checkRecursive) {
+            Stapleable stapleable = GetComponent<Stapleable>();
+            if (stapleable != null) {
+                List<Stapleable> allLinked = new List<Stapleable>();
+                stapleable.GetAllLinked(allLinked);
+                foreach (Stapleable s in allLinked) {
+                    inLegalPosition &= s.GetComponent<DragnDrop>().IsInLegalPosition(false);
+                }
+            }
+        }
+        return inLegalPosition;
     }
 
     private void Update() {
