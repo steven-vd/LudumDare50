@@ -20,7 +20,13 @@ public class DragnDrop : MonoBehaviour {
     }
 
     public bool IsInLegalPosition() {
-        return transform.position.y + transform.lossyScale.y / 2 < (Surface.transform as RectTransform).anchoredPosition.y + (Surface.transform as RectTransform).rect.height * Surface.transform.lossyScale.y / 2;
+        if (transform.GetChild(0).transform is RectTransform) {
+            return transform.position.y + (transform.GetChild(0).transform as RectTransform).rect.height * transform.GetChild(0).lossyScale.y / 2 <
+            (Surface.transform as RectTransform).anchoredPosition.y + (Surface.transform as RectTransform).rect.height * Surface.transform.lossyScale.y / 2;
+        } else {
+            return transform.position.y + transform.GetChild(0).lossyScale.y / 2 <
+            (Surface.transform as RectTransform).anchoredPosition.y + (Surface.transform as RectTransform).rect.height * Surface.transform.lossyScale.y / 2;
+        }
     }
 
     private void Update() {
