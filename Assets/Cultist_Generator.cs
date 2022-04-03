@@ -6,7 +6,7 @@ public class Cultist_Generator : MonoBehaviour
 {
     // Start is called before the first frame update
     private GameObject[] faces;
-    public int faceCount;
+    private int faceCount;
     public bool setFace = false;
     public bool limitFace = false;
     public int activeFace;
@@ -21,9 +21,9 @@ public class Cultist_Generator : MonoBehaviour
         if(setFace == false)
         activeFace = Random.Range(0, faceCount);
         else if(weird == false && limitFace == true)
-        activeFace = Random.Range(0, 2);
+        activeFace = Random.Range(0, 3);
         else if(limitFace == true)
-        activeFace = Random.Range(3, 5);
+        activeFace = Random.Range(4, 7);
 
         faces[activeFace].SetActive(true);
         Debug.Log(activeFace);
