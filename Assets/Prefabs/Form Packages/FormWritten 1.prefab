@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4584540282534174448, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_Name
-      value: Form_Finished
+      value: FormWritten 1
       objectReference: {fileID: 0}
     - target: {fileID: 4584540282534174450, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_RootOrder
@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4584540282534174450, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4584540282534174450, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_LocalRotation.w
