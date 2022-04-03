@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50bb842c7cd868e05b4c8891718aa5ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfStamp: {fileID: 2641480497185628153, guid: ba9048c5d6c386c42ad2c6d96e823a41, type: 3}
+  pfStamp: {fileID: 2641480497185628153, guid: 27644d54caab3234b892562cb94e4cb3, type: 3}
 --- !u!114 &7638490546711327583
 MonoBehaviour:
   m_ObjectHideFlags: 0

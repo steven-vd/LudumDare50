@@ -21,6 +21,8 @@ public class Citizen_Logic : MonoBehaviour
         if(nextCitizen.transform.position.x < 0.0f){
         nextCitizen.transform.position = new Vector3(nextCitizen.transform.position.x+300.0f* Time.deltaTime, nextCitizen.transform.position.y, nextCitizen.transform.position.z); 
         }
+        else
+        UnLoadPackage();
     
         if(currentCitizen != null)
         if(currentCitizen.transform.position.x < 1500.0f){
@@ -39,25 +41,29 @@ public class Citizen_Logic : MonoBehaviour
         
     }
 
-    public void WalkAway(){
+    public void WalkAway(bool delayed){
+
+        DeletePackage();
         currentCitizen = nextCitizen;
         if(transform.childCount >= 2){
-        nextCitizen =  transform.GetChild(1).gameObject;
-        WalkUp();
-    }
+             nextCitizen =  transform.GetChild(1).gameObject;
+             WalkUp();
+        }
 
     }
 
     public void UnLoadPackage(){
 
 
-
+        
     }
 
     public void DeletePackage(){
-
-
+        
+        
     }
+
+
 
 
 }
