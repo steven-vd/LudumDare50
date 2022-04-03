@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313276610957579251, guid: 4bc89b4dba2fde94cb509988f50460b1, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5313276610957579251, guid: 4bc89b4dba2fde94cb509988f50460b1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -193,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313276610957579251, guid: 3d7645200170c7e4cab9099de3d2475f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5313276610957579251, guid: 3d7645200170c7e4cab9099de3d2475f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -274,7 +274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8108030773922717057, guid: 9f87f1c2c83b5e64a9bad2f8b48608c8, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8108030773922717057, guid: 9f87f1c2c83b5e64a9bad2f8b48608c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minY: 540
   maxY: 1220
-  edgePanDistance: 200
+  edgePanDistance: 100
   panSpeed: 3
   desiredY: 0
 --- !u!1 &722390489
@@ -508,7 +508,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4890250906582995672, guid: da61df04073103c4988ccb9aa521f895, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4890250906582995672, guid: da61df04073103c4988ccb9aa521f895, type: 3}
       propertyPath: m_LocalPosition.x
@@ -898,7 +898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50bb842c7cd868e05b4c8891718aa5ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfStamp: {fileID: 0}
+  pfStamp: {fileID: 2641480497185628153, guid: ba9048c5d6c386c42ad2c6d96e823a41, type: 3}
 --- !u!114 &1119610085
 MonoBehaviour:
   m_ObjectHideFlags: 0
