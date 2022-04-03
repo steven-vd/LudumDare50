@@ -42,8 +42,14 @@ public class DragnDrop : MonoBehaviour {
     }
 
     private void Update() {
-        if (!Input.GetMouseButton(0) && !IsInLegalPosition()) {
-            transform.position = Vector3.Lerp(transform.position, lastLegalPosition, returnToLastLegalPositionSpeed * Time.deltaTime);
+        if (!IsInLegalPosition()) {
+            if (!Input.GetMouseButton(0)) {
+                transform.position = Vector3.Lerp(transform.position, lastLegalPosition, returnToLastLegalPositionSpeed * Time.deltaTime);
+            }
+            if (Input.GetMouseButtonUp(0)) {
+                //DEBUG
+                print(GetComponent<Form>()?.IsAccepted());
+            }
         }
     }
 

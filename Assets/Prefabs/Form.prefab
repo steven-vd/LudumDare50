@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 6335348288709074669}
   - component: {fileID: 2788326524819102125}
   - component: {fileID: 382514966110763251}
+  - component: {fileID: 4290264907995735355}
   m_Layer: 8
   m_Name: Form
   m_TagString: Untagged
@@ -367,3 +368,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tfStapleImageParent: {fileID: 8242719344972853276}
   linked: []
+--- !u!114 &4290264907995735355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005558246333215207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0586d89d3f7fda568981395a15812e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  formsToAddIfAccepted: []
