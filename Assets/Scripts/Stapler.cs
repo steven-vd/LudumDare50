@@ -4,9 +4,23 @@ using UnityEngine;
 public class Stapler : MonoBehaviour {
 
     public GameObject pfStaple;
+    public AudioSource audio;
+    public AudioClip stamp1;
+    public AudioClip stamp2;
+    public AudioClip stamp3;
 
     private void OnMouseOver() {
         if (Input.GetMouseButtonDown(1)) {
+            if(Random.Range(0, 3)==0)
+            audio.clip = stamp1;
+            else if(Random.Range(0, 2)==0)
+            audio.clip = stamp2;
+            else
+            audio.clip = stamp3;
+            audio.Play();
+
+
+
             ContactFilter2D cf2d = new ContactFilter2D();
             cf2d.useTriggers = true;
             cf2d.layerMask = 1 << 8;

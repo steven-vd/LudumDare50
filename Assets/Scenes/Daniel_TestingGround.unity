@@ -1129,9 +1129,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7638490546711327582, guid: 4297430c2f851044996e9c5147a5451b, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 1768942478}
+    - target: {fileID: 7638490546711327582, guid: 4297430c2f851044996e9c5147a5451b, type: 3}
+      propertyPath: stamp1
+      value: 
+      objectReference: {fileID: 8300000, guid: 135d50a53c052704fba38ad3afc42ba2, type: 3}
+    - target: {fileID: 7638490546711327582, guid: 4297430c2f851044996e9c5147a5451b, type: 3}
+      propertyPath: stamp2
+      value: 
+      objectReference: {fileID: 8300000, guid: 99fbac031496b934295377a2fe5ff301, type: 3}
     - target: {fileID: 7638490546711327589, guid: 4297430c2f851044996e9c5147a5451b, type: 3}
       propertyPath: m_Name
       value: StampApproved
+      objectReference: {fileID: 0}
+    - target: {fileID: 7639096845750199956, guid: 4297430c2f851044996e9c5147a5451b, type: 3}
+      propertyPath: m_Pitch
+      value: 0.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4297430c2f851044996e9c5147a5451b, type: 3}
@@ -1192,6 +1208,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16d13c785381bc001b67461f60fffca8, type: 3}
+--- !u!82 &1768942478 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7639096845750199956, guid: 4297430c2f851044996e9c5147a5451b, type: 3}
+  m_PrefabInstance: {fileID: 1697231070}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1789545632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6005558246333215205, guid: 16d13c785381bc001b67461f60fffca8, type: 3}
