@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.6649933, y: -51.800003}
-  m_SizeDelta: {x: -35.869995, y: 200}
+  m_AnchoredPosition: {x: 4.6813, y: -51.800003}
+  m_SizeDelta: {x: -39.9026, y: 200}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &6210544799060163907
 CanvasRenderer:
@@ -66,7 +66,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I can see it all so clearly now.
+  m_text: Here at Zientology, we make sure zat ALL our experiments are represented
+    as morally correct to ze public
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -93,8 +94,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
