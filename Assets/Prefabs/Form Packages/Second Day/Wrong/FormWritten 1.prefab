@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 8829343526017914477, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_text
       value: If god wouldn't have wanted us to bear arms, he wouldn't have created
-        the second amendment ! Let's shoot some clouds !
+        the second amendment! Let's shoot some clouds!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}

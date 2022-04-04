@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4584540282534174448, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_Name
-      value: FormWritten
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4584540282534174450, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_RootOrder
