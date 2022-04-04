@@ -4,7 +4,7 @@ using UnityEngine;
 public class Stamp : MonoBehaviour {
 
     public GameObject pfStamp;
-    public AudioSource audio;
+    public AudioSource audioSource;
     public AudioClip stamp1;
     public AudioClip stamp2;
 
@@ -12,10 +12,10 @@ public class Stamp : MonoBehaviour {
     private void OnMouseOver() {
         if (Input.GetMouseButtonDown(1)) {
             if(Random.Range(0, 2)==0)
-            audio.clip = stamp1;
+            audioSource.clip = stamp1;
             else
-            audio.clip = stamp2;
-            audio.Play();
+            audioSource.clip = stamp2;
+            audioSource.Play();
 
             ContactFilter2D cf2d = new ContactFilter2D();
             cf2d.useTriggers = true;
