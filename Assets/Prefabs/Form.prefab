@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 4290264907995735355}
   - component: {fileID: 6416482305362239803}
   - component: {fileID: 280221135429591356}
+  - component: {fileID: 1235909315344271425}
   m_Layer: 8
   m_Name: Form
   m_TagString: Untagged
@@ -376,6 +377,7 @@ MonoBehaviour:
   mousePosDeltaOnInitiateDrag: {x: 0, y: 0}
   lastLegalPosition: {x: 0, y: 0, z: 0}
   CurrentlyDraggedObject: {fileID: 0}
+  _currentlyDragging: 0
 --- !u!114 &6335348288709074669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,3 +550,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1235909315344271425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005558246333215207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3e5e4c73d4b44e9ae4ee29763a0fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4024353027413323751}
+        m_TargetAssemblyTypeName: ScaleToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

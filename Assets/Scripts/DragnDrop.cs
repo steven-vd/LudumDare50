@@ -15,6 +15,8 @@ public class DragnDrop : MonoBehaviour {
     public Vector3 lastLegalPosition = Vector3.zero;
     [HideInInspector]
     public DragnDrop CurrentlyDraggedObject;
+    [HideInInspector]
+    public bool _currentlyDragging = false;
 
     private void Awake() {
         if (Surface == null) {
@@ -74,6 +76,7 @@ public class DragnDrop : MonoBehaviour {
     }
 
     public void BeginDrag() {
+        _currentlyDragging = true;
         mousePosDeltaOnInitiateDrag = transform.position - Master.Instance.MainCamera.ScreenToWorldPoint(Input.mousePosition);
         CurrentlyDraggedObject = this;
         CurrentlyDraggedObject.transform.eulerAngles = new Vector3(
@@ -81,7 +84,6 @@ public class DragnDrop : MonoBehaviour {
             CurrentlyDraggedObject.transform.eulerAngles.y,
             CurrentlyDraggedObject.transform.eulerAngles.z - 5
         );
-        GetComponentInChildren<ScaleToggle>()?.Toggle();
     }
 
     private void OnMouseDown() {
@@ -103,13 +105,19 @@ public class DragnDrop : MonoBehaviour {
     }
 
     public void EndDrag() {
+        _currentlyDragging = false;
         CurrentlyDraggedObject.transform.eulerAngles = new Vector3(
             CurrentlyDraggedObject.transform.eulerAngles.x,
             CurrentlyDraggedObject.transform.eulerAngles.y,
             CurrentlyDraggedObject.transform.eulerAngles.z + 5
         );
-        GetComponentInChildren<ScaleToggle>()?.Toggle();
         GetComponent<SetZByY>().UpdateZ();
+
+        //Reset scale if toggled
+        ScaleToggle scaleToggle = GetComponentInChildren<ScaleToggle>();
+        if (scaleToggle != null && scaleToggle.alt) {
+            scaleToggle.Toggle();
+        }
     }
 
     private void OnMouseUp(){
@@ -131,13 +139,18 @@ public class DragnDrop : MonoBehaviour {
     }
 
     public void Drag() {
-
         Vector2 mousePos = Master.Instance.MainCamera.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(
             mousePos.x + mousePosDeltaOnInitiateDrag.x,
             mousePos.y + mousePosDeltaOnInitiateDrag.y,
             transform.position.z
         );
+
+        //Order if not zoomed
+        ScaleToggle scaleToggle = GetComponentInChildren<ScaleToggle>();
+        if (scaleToggle != null && !scaleToggle.alt) {
+            GetComponent<SetZByY>().UpdateZ();
+        }
     }
 
     private void OnMouseDrag() {
