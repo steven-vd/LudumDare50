@@ -1194,11 +1194,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4807234546329382282, guid: da61df04073103c4988ccb9aa521f895, type: 3}
       propertyPath: m_text
-      value: 'Use Left Click to Drag Objects, and Right Click to use Objects.
+      value: 'Use Left Click to Drag Objects, and while dragging Objects Right Click
+        to use them.
 
 
-        To
-        begin the Game stamp the Start Game Form and hand it over the Counter.'
+        To begin the Game stamp the Start Game Form and hand
+        it over the Counter.'
       objectReference: {fileID: 0}
     - target: {fileID: 4890250906582995672, guid: da61df04073103c4988ccb9aa521f895, type: 3}
       propertyPath: m_RootOrder
