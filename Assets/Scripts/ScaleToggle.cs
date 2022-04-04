@@ -16,7 +16,7 @@ public class ScaleToggle : MonoBehaviour {
             transform.parent.position = new Vector3(
                 transform.position.x,
                 transform.position.y,
-                Master.Instance.MainCamera.transform.position.z + 1
+                transform.position.z - 100
             );
         }
         alt = !alt;
