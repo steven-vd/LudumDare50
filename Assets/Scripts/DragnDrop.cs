@@ -45,14 +45,20 @@ public class DragnDrop : MonoBehaviour {
 
     private void Update() {
         if (!IsInLegalPosition()) {
+            //DONT_FIXME all forms are connected here. ACTUALLY it's a feature
             if (!Input.GetMouseButton(0)) {
                 transform.position = Vector3.Lerp(transform.position, lastLegalPosition, returnToLastLegalPositionSpeed * Time.deltaTime);
-                
             }
             if (CurrentlyDraggedObject == this && !TransactionHandler.InBetweenTransactions() && Input.GetMouseButtonUp(0)) {
                 Form form = GetComponent<Form>();
                 if (form != null && form.IsReturnable()) {
                     Citizen_Logic.Instance.WalkAway(!form.IsAccepted());
+                    //Destroy stapled forms
+                    List<Stapleable> allLinkedStapleables = new List<Stapleable>();
+                    GetComponent<Stapleable>().GetAllLinked(allLinkedStapleables);
+                    foreach (Stapleable s in allLinkedStapleables) {
+                        Destroy(s.gameObject);
+                    }
                 }
             }
         }
@@ -62,10 +68,10 @@ public class DragnDrop : MonoBehaviour {
         mousePosDeltaOnInitiateDrag = transform.position - Master.Instance.MainCamera.ScreenToWorldPoint(Input.mousePosition);
         CurrentlyDraggedObject = this;
         CurrentlyDraggedObject.transform.eulerAngles = new Vector3(
-    CurrentlyDraggedObject.transform.eulerAngles.x,
-    CurrentlyDraggedObject.transform.eulerAngles.y,
-    CurrentlyDraggedObject.transform.eulerAngles.z - 5
-);
+            CurrentlyDraggedObject.transform.eulerAngles.x,
+            CurrentlyDraggedObject.transform.eulerAngles.y,
+            CurrentlyDraggedObject.transform.eulerAngles.z - 5
+        );
     }
 
     private void OnMouseDown() {
@@ -87,10 +93,10 @@ public class DragnDrop : MonoBehaviour {
 
     private void OnMouseUp(){
         CurrentlyDraggedObject.transform.eulerAngles = new Vector3(
-                    CurrentlyDraggedObject.transform.eulerAngles.x,
-                    CurrentlyDraggedObject.transform.eulerAngles.y,
-                    CurrentlyDraggedObject.transform.eulerAngles.z + 5
-                );
+            CurrentlyDraggedObject.transform.eulerAngles.x,
+            CurrentlyDraggedObject.transform.eulerAngles.y,
+            CurrentlyDraggedObject.transform.eulerAngles.z + 5
+        );
     }
 
     public void Drag() {
