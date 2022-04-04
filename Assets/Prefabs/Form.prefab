@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialScale: {x: 1, y: 1, z: 1}
-  alternativeScale: {x: 2, y: 2, z: 2}
+  alternativeScale: {x: 1.8, y: 1.8, z: 1.8}
   alt: 0
 --- !u!1 &6005558246333215207
 GameObject:
@@ -371,6 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tfStampImageParent: {fileID: 8242719344972853276}
+  scaleMod: 1
 --- !u!114 &382514966110763251
 MonoBehaviour:
   m_ObjectHideFlags: 0
