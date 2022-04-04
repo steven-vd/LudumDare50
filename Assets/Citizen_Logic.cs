@@ -86,5 +86,7 @@ public class Citizen_Logic : MonoBehaviour {
 
     }
 
+    
+
 
 }
