@@ -138,9 +138,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Surface: {fileID: 0}
   returnToLastLegalPositionSpeed: 3
+  OnBeginDrag:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEndDrag:
+    m_PersistentCalls:
+      m_Calls: []
   mousePosDeltaOnInitiateDrag: {x: 0, y: 0}
   lastLegalPosition: {x: 0, y: 0, z: 0}
   CurrentlyDraggedObject: {fileID: 0}
+  _currentlyDragging: 0
 --- !u!114 &7550421635124959086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a545fc6655eabb76a7a2699fc986505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -80
+  offset: -90
   factor: 0.01
 --- !u!114 &1842519776523079726
 MonoBehaviour:
