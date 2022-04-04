@@ -69,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8829343526017914477, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_text
-      value: We will be looking at clounds and interpreting them
+      value: We will be looking at clouds and interpreting them
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}

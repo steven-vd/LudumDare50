@@ -66,8 +66,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The mayor''s brithday is 29/04. No other events are allowed during that
-    day.
+  m_text: 'The mayor''s birthday is on 29/04. No other events are allowed during
+    that day.
 
 
     Good Luck with those religious nuts.'

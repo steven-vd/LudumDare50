@@ -69,8 +69,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8829343526017914477, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_text
-      value: Family matters. So why not join us on our father-son hike. You will
-        have never felt closer to each other. Male Participants only.
+      value: Family matters. So why not join us on our father-son hike. You'll never
+        have felt closer to each other. Male Participants only.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
