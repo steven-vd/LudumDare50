@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,11 @@ public class Citizen_Logic : MonoBehaviour {
     }
 
     void Start() {
+        StartCoroutine(StartDelayed(5.0f));
+    }
+
+    public IEnumerator StartDelayed(float seconds) {
+        yield return new WaitForSeconds(seconds);
         nextCitizen = transform.GetChild(0).gameObject;
         WalkUp();
         delayed = 0;
