@@ -16,7 +16,8 @@ public class Citizen_Logic : MonoBehaviour {
     }
 
     void Start() {
-        StartCoroutine(StartDelayed(5.0f));
+        CameraFade.FadeIn(1.0f);
+        StartCoroutine(StartDelayed(1.0f));
     }
 
     public IEnumerator StartDelayed(float seconds) {
@@ -84,15 +85,19 @@ public class Citizen_Logic : MonoBehaviour {
     }
 
     public void ChangeScene(string sceneString){
-
-        if(delayed >= 8)
-        SceneManager.LoadScene(sceneString+"A");
-        else
-        SceneManager.LoadScene(sceneString);
-
+        CameraFade.FadeOut(1.0f);
+        StartCoroutine(ChangeSceneDelayed(sceneString, 1.0f));
     }
 
+    public IEnumerator ChangeSceneDelayed(string sceneString, float seconds) {
+        yield return new WaitForSeconds(seconds);
+        CameraFade.Halted = true;
+
+        if(delayed >= 8) {
+            SceneManager.LoadScene(sceneString+"A");
+        } else {
+            SceneManager.LoadScene(sceneString);
+        }
+    }
     
-
-
 }
