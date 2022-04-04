@@ -55,8 +55,10 @@ public class Citizen_Logic : MonoBehaviour {
     }
 
     public void WalkAway(bool delayed){
-        if(delayed == true)
+        if(delayed == true){
         transform.parent.GetChild(2).GetChild(1).gameObject.GetComponent<Animator>().Play("Appearing", 0);
+        delayed++;
+        }
         else
         transform.parent.GetChild(2).GetChild(0).gameObject.GetComponent<Animator>().Play("Appearing", 0);
 
