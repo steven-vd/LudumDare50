@@ -27,7 +27,7 @@ public class Citizen_Logic : MonoBehaviour {
         }
         else{
             UnLoadPackage();
-            WalkAway(false); //Auto accept when in center
+          //  WalkAway(false); //Auto accept when in center
         }
 
         if(currentCitizen != null)
@@ -77,13 +77,13 @@ public class Citizen_Logic : MonoBehaviour {
         TransactionHandler.Instance.goPackage = null;
     }
 
-    public void ChangeScene(string sceneString, string sceneString2){
-/*
-        if(delayed >= 8)
+    public void ChangeScene(string sceneString){
 
+        if(delayed >= 8)
+        SceneManager.LoadScene(sceneString+"A");
         else
         SceneManager.LoadScene(sceneString);
-*/
+
     }
 
 
