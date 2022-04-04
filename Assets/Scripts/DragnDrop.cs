@@ -47,6 +47,7 @@ public class DragnDrop : MonoBehaviour {
         if (!IsInLegalPosition()) {
             if (!Input.GetMouseButton(0)) {
                 transform.position = Vector3.Lerp(transform.position, lastLegalPosition, returnToLastLegalPositionSpeed * Time.deltaTime);
+                
             }
             if (CurrentlyDraggedObject == this && !TransactionHandler.InBetweenTransactions() && Input.GetMouseButtonUp(0)) {
                 Form form = GetComponent<Form>();
@@ -60,6 +61,11 @@ public class DragnDrop : MonoBehaviour {
     public void BeginDrag() {
         mousePosDeltaOnInitiateDrag = transform.position - Master.Instance.MainCamera.ScreenToWorldPoint(Input.mousePosition);
         CurrentlyDraggedObject = this;
+        CurrentlyDraggedObject.transform.eulerAngles = new Vector3(
+    CurrentlyDraggedObject.transform.eulerAngles.x,
+    CurrentlyDraggedObject.transform.eulerAngles.y,
+    CurrentlyDraggedObject.transform.eulerAngles.z - 5
+);
     }
 
     private void OnMouseDown() {
@@ -77,6 +83,14 @@ public class DragnDrop : MonoBehaviour {
                 s.GetComponent<DragnDrop>().BeginDrag();
             }
         }
+    }
+
+    private void OnMouseUp(){
+        CurrentlyDraggedObject.transform.eulerAngles = new Vector3(
+                    CurrentlyDraggedObject.transform.eulerAngles.x,
+                    CurrentlyDraggedObject.transform.eulerAngles.y,
+                    CurrentlyDraggedObject.transform.eulerAngles.z + 5
+                );
     }
 
     public void Drag() {

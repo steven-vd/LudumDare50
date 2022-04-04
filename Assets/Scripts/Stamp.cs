@@ -34,7 +34,8 @@ public class Stamp : MonoBehaviour {
                     foremost = formCollider.transform;
                 }
             }
-            foremost.GetComponent<Stampable>().Stamp(pfStamp, transform.position, transform.rotation);
+
+            foremost.GetComponent<Stampable>().Stamp(pfStamp, new Vector3 (transform.position.x,transform.position.y-50.0f,transform.position.z), transform.rotation);
         }
     }
 

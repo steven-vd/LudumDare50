@@ -48,7 +48,7 @@ public class Stapler : MonoBehaviour {
                     foremost = stapleable.transform;
                 }
             }
-            foremost.GetComponent<Stapleable>().Staple(pfStaple, transform.position, transform.rotation);
+            foremost.GetComponent<Stapleable>().Staple(pfStaple,  new Vector3 (transform.position.x-100.0f,transform.position.y-25.0f,transform.position.z), transform.rotation);
         }
     }
 

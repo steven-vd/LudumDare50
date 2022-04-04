@@ -60,10 +60,11 @@ public class Citizen_Logic : MonoBehaviour {
     }
 
     public void UnLoadPackage(){
-        if(transform.parent.GetChild(1).childCount >= 1)
+        if(transform.parent.GetChild(1).childCount >= 1){
         transform.parent.GetChild(1).GetChild(0).gameObject.SetActive(true);
         
         TransactionHandler.Instance.goPackage = transform.parent.GetChild(1).GetChild(0).gameObject;
+        }
     }
 
     public void DeletePackage(){

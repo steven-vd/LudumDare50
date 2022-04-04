@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7638490546711327589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 25, y: 263, z: -9}
-  m_LocalScale: {x: 40, y: 40, z: 40}
+  m_LocalScale: {x: 55, y: 55, z: 55}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7638490548280726342}
@@ -80,6 +80,7 @@ MonoBehaviour:
   returnToLastLegalPositionSpeed: 3
   mousePosDeltaOnInitiateDrag: {x: 0, y: 0}
   lastLegalPosition: {x: 0, y: 0, z: 0}
+  CurrentlyDraggedObject: {fileID: 0}
 --- !u!114 &7638490546711327582
 MonoBehaviour:
   m_ObjectHideFlags: 0

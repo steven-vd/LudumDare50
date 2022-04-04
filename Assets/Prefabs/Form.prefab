@@ -278,8 +278,8 @@ Transform:
   m_GameObject: {fileID: 6005558246333215207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 446, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6005558246018536239}
   m_Father: {fileID: 0}
@@ -327,6 +327,7 @@ MonoBehaviour:
   returnToLastLegalPositionSpeed: 3
   mousePosDeltaOnInitiateDrag: {x: 0, y: 0}
   lastLegalPosition: {x: 0, y: 0, z: 0}
+  CurrentlyDraggedObject: {fileID: 0}
 --- !u!114 &6335348288709074669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,4 +381,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0586d89d3f7fda568981395a15812e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   formsToAddIfAccepted: []
