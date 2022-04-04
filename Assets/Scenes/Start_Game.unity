@@ -544,6 +544,7 @@ GameObject:
   - component: {fileID: 722390490}
   - component: {fileID: 722390491}
   - component: {fileID: 722390492}
+  - component: {fileID: 722390493}
   m_Layer: 0
   m_Name: _Master
   m_TagString: Untagged
@@ -592,6 +593,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goPackage: {fileID: 0}
+--- !u!114 &722390493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722390489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf14f6f02499c6a708efd43bd3c7db90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture: {fileID: 2800000, guid: 5b33eeb4a5a23664182ad7308f907d2a, type: 3}
+  hotspot: {x: 5, y: 5}
+  cursorMode: 0
 --- !u!1 &793804875
 GameObject:
   m_ObjectHideFlags: 0
