@@ -764,7 +764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tfStampImageParent: {fileID: 1650165643}
-  scaleMod: 1
+  scaleMod: 1.6
 --- !u!114 &1227464004
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 883093363167437060, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_text
-      value: 
+      value: The Goat
       objectReference: {fileID: 0}
     - target: {fileID: 2746365899668185654, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_text
-      value: Mother
+      value: Lady's Symphony
       objectReference: {fileID: 0}
     - target: {fileID: 4584540282534174448, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_Name
@@ -65,16 +65,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7933811792215995444, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_text
-      value: 
+      value: 12/05/22
       objectReference: {fileID: 0}
     - target: {fileID: 8829343526017914477, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_text
-      value: 'Why do you not speak with me ?
-
-        Why is she silent?
-
-        Am
-        I worthy no longer ?'
+      value: Let us remain out at night and listen to the subtle sway of Mother Night
+        as we settle in her Embrace.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}

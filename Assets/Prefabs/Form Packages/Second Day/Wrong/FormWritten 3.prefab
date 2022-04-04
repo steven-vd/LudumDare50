@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2746365899668185654, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_text
-      value: Night of Fishies
+      value: Life free of worry
       objectReference: {fileID: 0}
     - target: {fileID: 4584540282534174448, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_Name
@@ -65,11 +65,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7933811792215995444, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_text
-      value: 28/04/22
+      value: 12/05/22
       objectReference: {fileID: 0}
     - target: {fileID: 8829343526017914477, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_text
-      value: 
+      value: We will discuss the well kept secret of how to live a life free of worry.
+        Without giving away too much, the answer includes booze.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
