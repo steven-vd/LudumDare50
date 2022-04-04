@@ -69,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8829343526017914477, guid: 17177e16387e88e4aa1525f81e24209b, type: 3}
       propertyPath: m_text
-      value: It is only with the blood of our almighty lord that sin can be washed
+      value: It is only with the blood of our almighty Lord that sin can be washed
         away permanently. Join me brothers. For tonight, we drink.
       objectReference: {fileID: 0}
     m_RemovedComponents: []

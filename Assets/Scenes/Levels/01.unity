@@ -1305,15 +1305,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4807234546329382282, guid: da61df04073103c4988ccb9aa521f895, type: 3}
       propertyPath: m_text
-      value: 'Ps. Don''t worry about details yet most of these forms should be already
-        correct.
+      value: 'Ps. Don''t worry about details yet. Most of these forms should be correct.
 
 
-        Phil is gonna handle the rest at 9970.
+        Phil
+        is gonna handle the rest at 9970.
 
 
-        Good
-        luck and welcome to the office.'
+        Good luck and welcome to the
+        office.'
       objectReference: {fileID: 0}
     - target: {fileID: 4890250906582995672, guid: da61df04073103c4988ccb9aa521f895, type: 3}
       propertyPath: m_RootOrder
@@ -2473,8 +2473,8 @@ PrefabInstance:
 
         If they aren''t filled out, deny them.
 
-        When your done
-        hand them back to the citizen.'
+        When you''re
+        done hand them back to the citizen.'
       objectReference: {fileID: 0}
     - target: {fileID: 4890250906582995672, guid: da61df04073103c4988ccb9aa521f895, type: 3}
       propertyPath: m_RootOrder
