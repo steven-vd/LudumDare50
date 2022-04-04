@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class Citizen_Logic : MonoBehaviour {
 
+    [HideInInspector]
+    public AudioSource audioSource;
+    public AudioClip acceptClip, denyClip;
+
     public static Citizen_Logic Instance;
 
     private GameObject currentCitizen;
@@ -13,6 +17,7 @@ public class Citizen_Logic : MonoBehaviour {
 
     private void Awake() {
         Instance = this;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start() {
@@ -55,12 +60,15 @@ public class Citizen_Logic : MonoBehaviour {
     }
 
     public void WalkAway(bool delayed){
-        if(delayed == true){
-        transform.parent.GetChild(2).GetChild(1).gameObject.GetComponent<Animator>().Play("Appearing", 0);
-        this.delayed++;
+        if(delayed){
+            transform.parent.GetChild(2).GetChild(1).gameObject.GetComponent<Animator>().Play("Appearing", 0);
+            this.delayed++;
+            audioSource.clip = denyClip;
+        } else {
+            transform.parent.GetChild(2).GetChild(0).gameObject.GetComponent<Animator>().Play("Appearing", 0);
+            audioSource.clip = acceptClip;
         }
-        else
-        transform.parent.GetChild(2).GetChild(0).gameObject.GetComponent<Animator>().Play("Appearing", 0);
+        audioSource.Play();
 
 
         DeletePackage();
