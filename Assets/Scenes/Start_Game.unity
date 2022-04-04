@@ -151,10 +151,90 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 91581725}
   - {fileID: 1129632190}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &91581724
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 88796635}
+    m_Modifications:
+    - target: {fileID: 2610428384010667592, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_text
+      value: 'Sir.Daniel- Programming, Writing
+
+        steven-vd- Programming
+
+        Tamatsu-
+        Art, Audio'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610428384010667592, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610428384010667592, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789930594669180489, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_Name
+      value: Empty Paper
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789930594669180491, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789930594669180491, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -802.6384
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789930594669180491, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 42.509583
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789930594669180491, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789930594669180491, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789930594669180491, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789930594669180491, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789930594669180491, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789930594669180491, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789930594669180491, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3789930594669180491, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+--- !u!4 &91581725 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3789930594669180491, guid: 39ad7970726910a498bb2bb82577eee1, type: 3}
+  m_PrefabInstance: {fileID: 91581724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &442678742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -843,6 +923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tfStampImageParent: {fileID: 1650165643}
+  scaleMod: 1.6
 --- !u!114 &1227464004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,7 +1105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4807234546329382282, guid: da61df04073103c4988ccb9aa521f895, type: 3}
       propertyPath: m_text
-      value: 'Use Right Click to Drag Objects, and Left Click to use Objects.
+      value: 'Use Left Click to Drag Objects, and Right Click to use Objects.
 
 
         To
@@ -1032,7 +1113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4890250906582995672, guid: da61df04073103c4988ccb9aa521f895, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4890250906582995672, guid: da61df04073103c4988ccb9aa521f895, type: 3}
       propertyPath: m_LocalPosition.x
