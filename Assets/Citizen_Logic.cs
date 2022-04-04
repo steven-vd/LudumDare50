@@ -17,7 +17,7 @@ public class Citizen_Logic : MonoBehaviour {
 
     void Start() {
         CameraFade.FadeIn(1.0f);
-        StartCoroutine(StartDelayed(1.0f));
+        StartCoroutine(StartDelayed(6.66f));
     }
 
     public IEnumerator StartDelayed(float seconds) {
