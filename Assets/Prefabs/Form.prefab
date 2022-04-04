@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 6005558246018536237}
   - component: {fileID: 6005558246018536236}
   - component: {fileID: 1765994010854813590}
+  - component: {fileID: 4024353027413323751}
   m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
@@ -247,6 +248,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6005558246018536238}
   m_CullTransparentMesh: 1
+--- !u!114 &4024353027413323751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005558246018536238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd65657d1f3daeb15bf47d4ba38f3610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialScale: {x: 1, y: 1, z: 1}
+  alternativeScale: {x: 2, y: 2, z: 2}
+  alt: 0
 --- !u!1 &6005558246333215207
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,8 +278,6 @@ GameObject:
   - component: {fileID: 2788326524819102125}
   - component: {fileID: 382514966110763251}
   - component: {fileID: 4290264907995735355}
-  - component: {fileID: 2572574431482614479}
-  - component: {fileID: 1742803771707270083}
   m_Layer: 8
   m_Name: Form
   m_TagString: Untagged
@@ -388,45 +402,3 @@ MonoBehaviour:
   OnPressed:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2572574431482614479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6005558246333215207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd65657d1f3daeb15bf47d4ba38f3610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialScale: {x: 1.6, y: 1.6, z: 1.6}
-  alternativeScale: {x: 2.5, y: 2.5, z: 2.5}
-  alt: 0
---- !u!114 &1742803771707270083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6005558246333215207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b3e5e4c73d4b44e9ae4ee29763a0fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2572574431482614479}
-        m_TargetAssemblyTypeName: ScaleToggle, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2

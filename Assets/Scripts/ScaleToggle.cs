@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Canvas))]
 public class ScaleToggle : MonoBehaviour {
 
     public Vector3 initialScale, alternativeScale;
@@ -9,8 +10,14 @@ public class ScaleToggle : MonoBehaviour {
     public void Toggle() {
         if (alt) {
             transform.localScale = initialScale;
+            //No need to reset Z bc SetZByY
         } else {
             transform.localScale = alternativeScale;
+            transform.parent.position = new Vector3(
+                transform.position.x,
+                transform.position.y,
+                Master.Instance.MainCamera.transform.position.z + 1
+            );
         }
         alt = !alt;
     }

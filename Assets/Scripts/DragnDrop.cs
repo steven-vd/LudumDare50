@@ -72,6 +72,7 @@ public class DragnDrop : MonoBehaviour {
             CurrentlyDraggedObject.transform.eulerAngles.y,
             CurrentlyDraggedObject.transform.eulerAngles.z - 5
         );
+        GetComponentInChildren<ScaleToggle>()?.Toggle();
     }
 
     private void OnMouseDown() {
@@ -91,16 +92,34 @@ public class DragnDrop : MonoBehaviour {
         }
     }
 
-    private void OnMouseUp(){
+    public void EndDrag() {
         CurrentlyDraggedObject.transform.eulerAngles = new Vector3(
             CurrentlyDraggedObject.transform.eulerAngles.x,
             CurrentlyDraggedObject.transform.eulerAngles.y,
             CurrentlyDraggedObject.transform.eulerAngles.z + 5
         );
+        GetComponentInChildren<ScaleToggle>()?.Toggle();
+        GetComponent<SetZByY>().UpdateZ();
+    }
+
+    private void OnMouseUp(){
+        EndDrag();
+
+        Stapleable stapleable = GetComponent<Stapleable>();
+        if (stapleable == null) {
+            return;
+        }
+
+        List<Stapleable> allLinked = new List<Stapleable>();
+        stapleable.GetAllLinked(allLinked);
+        foreach (Stapleable s in allLinked) {
+            if (s.transform != this.transform) {
+                s.GetComponent<DragnDrop>().EndDrag();
+            }
+        }
     }
 
     public void Drag() {
-        GetComponent<SetZByY>().UpdateZ();
 
         Vector2 mousePos = Master.Instance.MainCamera.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(
