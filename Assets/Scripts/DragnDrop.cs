@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DragnDrop : MonoBehaviour {
 
     [Tooltip("Defaults to gameobject with name 'Desk'")]
     public GameObject Surface;
     public float returnToLastLegalPositionSpeed = 3;
+    public UnityEvent OnBeginDrag, OnEndDrag;
 
     [HideInInspector]
     public Vector2 mousePosDeltaOnInitiateDrag = Vector2.zero;
@@ -84,6 +86,7 @@ public class DragnDrop : MonoBehaviour {
 
     private void OnMouseDown() {
         BeginDrag();
+        OnBeginDrag.Invoke();
 
         Stapleable stapleable = GetComponent<Stapleable>();
         if (stapleable == null) {
@@ -111,6 +114,7 @@ public class DragnDrop : MonoBehaviour {
 
     private void OnMouseUp(){
         EndDrag();
+        OnEndDrag.Invoke();
 
         Stapleable stapleable = GetComponent<Stapleable>();
         if (stapleable == null) {
