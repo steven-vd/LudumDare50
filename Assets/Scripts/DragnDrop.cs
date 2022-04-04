@@ -11,6 +11,8 @@ public class DragnDrop : MonoBehaviour {
     public Vector2 mousePosDeltaOnInitiateDrag = Vector2.zero;
     [HideInInspector]
     public Vector3 lastLegalPosition = Vector3.zero;
+    [HideInInspector]
+    public DragnDrop CurrentlyDraggedObject;
 
     private void Awake() {
         if (Surface == null) {
@@ -46,15 +48,18 @@ public class DragnDrop : MonoBehaviour {
             if (!Input.GetMouseButton(0)) {
                 transform.position = Vector3.Lerp(transform.position, lastLegalPosition, returnToLastLegalPositionSpeed * Time.deltaTime);
             }
-            if (Input.GetMouseButtonUp(0)) {
-                //DEBUG
-                print(GetComponent<Form>()?.IsAccepted());
+            if (CurrentlyDraggedObject == this && !TransactionHandler.InBetweenTransactions() && Input.GetMouseButtonUp(0)) {
+                Form form = GetComponent<Form>();
+                if (form != null && form.IsReturnable()) {
+                    Citizen_Logic.Instance.WalkAway(!form.IsAccepted());
+                }
             }
         }
     }
 
     public void BeginDrag() {
         mousePosDeltaOnInitiateDrag = transform.position - Master.Instance.MainCamera.ScreenToWorldPoint(Input.mousePosition);
+        CurrentlyDraggedObject = this;
     }
 
     private void OnMouseDown() {

@@ -1,30 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Citizen_Logic : MonoBehaviour
-{
+public class Citizen_Logic : MonoBehaviour {
+
+    public static Citizen_Logic Instance;
+
     private GameObject currentCitizen;
     private GameObject nextCitizen;
 
-    // Start is called before the first frame update
-    void Start() {
-    nextCitizen = transform.GetChild(0).gameObject;
-    WalkUp();
-    
+    private void Awake() {
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Start() {
+        nextCitizen = transform.GetChild(0).gameObject;
+        WalkUp();
+    }
+
+    void Update() {
         if(nextCitizen != null)
         if(nextCitizen.transform.position.x < 0.0f){
-        nextCitizen.transform.position = new Vector3(nextCitizen.transform.position.x+300.0f* Time.deltaTime, nextCitizen.transform.position.y, nextCitizen.transform.position.z); 
+            nextCitizen.transform.position = new Vector3(nextCitizen.transform.position.x+300.0f* Time.deltaTime, nextCitizen.transform.position.y, nextCitizen.transform.position.z); 
         }
         else{
-        UnLoadPackage();
-        
-        WalkAway(false);
+            UnLoadPackage();
+            //WalkAway(false); //Auto accept when in center
         }
 
         if(currentCitizen != null)
@@ -64,11 +63,13 @@ public class Citizen_Logic : MonoBehaviour
         if(transform.parent.GetChild(1).childCount >= 1)
         transform.parent.GetChild(1).GetChild(0).gameObject.SetActive(true);
         
+        TransactionHandler.Instance.goPackage = transform.parent.GetChild(1).GetChild(0).gameObject;
     }
 
     public void DeletePackage(){
-        
         Destroy(transform.parent.GetChild(1).GetChild(0).gameObject);
+
+        TransactionHandler.Instance.goPackage = null;
     }
 
 

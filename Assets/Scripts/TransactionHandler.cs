@@ -23,4 +23,8 @@ public class TransactionHandler : MonoBehaviour {
         return requiredFormIds;
     }
 
+    public static bool InBetweenTransactions() {
+        return Instance.goPackage == null;
+    }
+
 }
