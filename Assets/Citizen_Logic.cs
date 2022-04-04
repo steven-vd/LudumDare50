@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Citizen_Logic : MonoBehaviour {
 
@@ -7,6 +8,8 @@ public class Citizen_Logic : MonoBehaviour {
     private GameObject currentCitizen;
     private GameObject nextCitizen;
 
+    private int delayed;
+
     private void Awake() {
         Instance = this;
     }
@@ -14,21 +17,22 @@ public class Citizen_Logic : MonoBehaviour {
     void Start() {
         nextCitizen = transform.GetChild(0).gameObject;
         WalkUp();
+        delayed = 0;
     }
 
     void Update() {
         if(nextCitizen != null)
         if(nextCitizen.transform.position.x < 0.0f){
-            nextCitizen.transform.position = new Vector3(nextCitizen.transform.position.x+300.0f* Time.deltaTime, nextCitizen.transform.position.y, nextCitizen.transform.position.z); 
+            nextCitizen.transform.position = new Vector3(nextCitizen.transform.position.x+600.0f* Time.deltaTime, nextCitizen.transform.position.y, nextCitizen.transform.position.z); 
         }
         else{
             UnLoadPackage();
-            //WalkAway(false); //Auto accept when in center
+            WalkAway(false); //Auto accept when in center
         }
 
         if(currentCitizen != null)
         if(currentCitizen.transform.position.x < 1500.0f){
-        currentCitizen.transform.position = new Vector3(currentCitizen.transform.position.x+400.0f* Time.deltaTime, currentCitizen.transform.position.y, currentCitizen.transform.position.z); 
+        currentCitizen.transform.position = new Vector3(currentCitizen.transform.position.x+1000.0f* Time.deltaTime, currentCitizen.transform.position.y, currentCitizen.transform.position.z); 
         }
         else{
         Destroy(currentCitizen);
@@ -73,7 +77,14 @@ public class Citizen_Logic : MonoBehaviour {
         TransactionHandler.Instance.goPackage = null;
     }
 
+    public void ChangeScene(string sceneString, string sceneString2){
+/*
+        if(delayed >= 8)
 
+        else
+        SceneManager.LoadScene(sceneString);
+*/
+    }
 
 
 }
