@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 //FIXME Currently there is no way to differentiate between different forms with the same ID
 public class Form : MonoBehaviour {
@@ -45,7 +46,7 @@ public class Form : MonoBehaviour {
     /// handed in and subsequently required forms are returned. Otherwise false.</returns>
     public bool IsReturnable() {
         bool returnable = true;
-
+        this.OnPressed.Invoke();
         List<string> requiredFormIds;
         if (IsAccepted()) {
             requiredFormIds = TransactionHandler.ListRequiredFormIds(true);
@@ -81,5 +82,7 @@ public class Form : MonoBehaviour {
 
         return returnable;
     }
+
+    public UnityEvent OnPressed;
 
 }

@@ -253,7 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 499858730806459146}
   m_Layer: 0
-  m_Name: Queue
+  m_Name: Empty_Queue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
