@@ -548,6 +548,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4290264907995735355, guid: 16d13c785381bc001b67461f60fffca8, type: 3}
+      propertyPath: id
+      value: Citizen
+      objectReference: {fileID: 0}
     - target: {fileID: 6005558244821435800, guid: 16d13c785381bc001b67461f60fffca8, type: 3}
       propertyPath: m_fontSize
       value: 3
