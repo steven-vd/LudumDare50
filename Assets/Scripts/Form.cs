@@ -67,7 +67,7 @@ public class Form : MonoBehaviour {
 
             List<string> allLinkedFormIds = new List<string>(allLinkedForms.Count);
             foreach (Form f in allLinkedForms) {
-                if (GetComponentsInChildren<Judgement>().Length == 0 && TransactionHandler.ListRequiredFormIds(false).Contains(id)) {
+                if (f.GetComponentsInChildren<Judgement>().Length == 0 && TransactionHandler.ListRequiredFormIds(false).Contains(f.id)) {
                     // Return false if form that requires approval or denial has neither
                     return false;
                 }

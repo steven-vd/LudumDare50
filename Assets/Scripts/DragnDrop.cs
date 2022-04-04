@@ -48,20 +48,26 @@ public class DragnDrop : MonoBehaviour {
             //DONT_FIXME all forms are connected here. ACTUALLY it's a feature
             if (!Input.GetMouseButton(0)) {
                 transform.position = Vector3.Lerp(transform.position, lastLegalPosition, returnToLastLegalPositionSpeed * Time.deltaTime);
+                GetComponent<SetZByY>().UpdateZ();
             }
-            if (CurrentlyDraggedObject == this && !TransactionHandler.InBetweenTransactions() && Input.GetMouseButtonUp(0)) {
-                Form form = GetComponent<Form>();
-                if (form != null && form.IsReturnable()) {
-                    Citizen_Logic.Instance.WalkAway(!form.IsAccepted());
-                    //Destroy stapled forms
-                    List<Stapleable> allLinkedStapleables = new List<Stapleable>();
-                    GetComponent<Stapleable>().GetAllLinked(allLinkedStapleables);
-                    foreach (Stapleable s in allLinkedStapleables) {
-                        Destroy(s.gameObject);
+            if (Input.GetMouseButtonUp(0)) {
+                if (CurrentlyDraggedObject == this && !TransactionHandler.InBetweenTransactions()) {
+                    Form form = GetComponent<Form>();
+                    if (form != null && form.IsReturnable()) {
+                        Citizen_Logic.Instance.WalkAway(!form.IsAccepted());
+                        //Destroy stapled forms
+                        List<Stapleable> allLinkedStapleables = new List<Stapleable>();
+                        GetComponent<Stapleable>().GetAllLinked(allLinkedStapleables);
+                        form.OnPressed.Invoke();
+                        foreach (Stapleable s in allLinkedStapleables) {
+                            s.GetComponent<Form>()?.OnPressed.Invoke();
+                            Destroy(s.gameObject);
+                        }
                     }
-                    form.OnPressed.Invoke();
                 }
             }
+        } else {
+            lastLegalPosition = transform.position;
         }
     }
 
@@ -128,11 +134,6 @@ public class DragnDrop : MonoBehaviour {
             mousePos.y + mousePosDeltaOnInitiateDrag.y,
             transform.position.z
         );
-
-        //Check if still on surface
-        if (IsInLegalPosition()) {
-            lastLegalPosition = transform.position;
-        }
     }
 
     private void OnMouseDrag() {
