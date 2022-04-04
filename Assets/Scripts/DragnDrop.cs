@@ -59,6 +59,7 @@ public class DragnDrop : MonoBehaviour {
                     foreach (Stapleable s in allLinkedStapleables) {
                         Destroy(s.gameObject);
                     }
+                    form.OnPressed.Invoke();
                 }
             }
         }

@@ -46,7 +46,6 @@ public class Form : MonoBehaviour {
     /// handed in and subsequently required forms are returned. Otherwise false.</returns>
     public bool IsReturnable() {
         bool returnable = true;
-        this.OnPressed.Invoke();
         List<string> requiredFormIds;
         if (IsAccepted()) {
             requiredFormIds = TransactionHandler.ListRequiredFormIds(true);
