@@ -68,7 +68,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Don't you hate it when people tell everyone your <s>cult</s> <size=120%><u>RELIGION</u><size=100%>
     is fake? \n\nWould be a real shame if those guys went missing, wouldn't it? \n\nYou
-    believe in us, don't you :)?"
+    believe in us, don't you ?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

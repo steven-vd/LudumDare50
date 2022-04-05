@@ -9,12 +9,42 @@ EditorBuildSettings:
     path: Assets/Scenes/Testing Scenes/Daniel_TestingGround.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Start_Game.unity
+    guid: 15d981466f0d5eb488d54c6733cd3fb1
+  - enabled: 1
     path: Assets/Scenes/Levels/01.unity
     guid: 58026831f0d9f6b4ea3c887b2383bd7e
-  - enabled: 1
-    path: Assets/Scenes/Levels/02.unity
-    guid: da1fdd2892d91dd47a58a73f67f8e454
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Levels/02A.unity
     guid: 24f3bba4f7107814489d0e84ce616caa
+  - enabled: 0
+    path: Assets/Scenes/Levels/Death.unity
+    guid: e773bb90ec1309841b4cc8c8b2e34db3
+  - enabled: 1
+    path: Assets/Scenes/Levels/DeathA.unity
+    guid: 6ea9b02fd3af1f543b80f509697e7d76
+  - enabled: 1
+    path: Assets/Scenes/Levels/End.unity
+    guid: f3c9d89bfaed0bc4e8c3e864ab39e6a0
+  - enabled: 1
+    path: Assets/Scenes/Levels/EndA.unity
+    guid: 663cb1c7ab750c2479ef8d8f5c6ef54c
+  - enabled: 1
+    path: Assets/Scenes/Levels/02.unity
+    guid: 1563125aaa54952468902377e12bc87d
+  - enabled: 1
+    path: Assets/Scenes/Levels/03.unity
+    guid: 1869710221f2e2a448523feac021ebdd
+  - enabled: 1
+    path: Assets/Scenes/Levels/03A.unity
+    guid: 77924cf796e1bf3418857adc6e87a696
+  - enabled: 1
+    path: Assets/Scenes/Levels/04.unity
+    guid: 997196aa157bf1540971958fc1bb49e5
+  - enabled: 1
+    path: Assets/Scenes/Levels/04A.unity
+    guid: 573489fc361320d4cb472b238d4db40a
   m_configObjects: {}

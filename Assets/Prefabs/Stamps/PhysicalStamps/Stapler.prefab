@@ -77,9 +77,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Surface: {fileID: 0}
   returnToLastLegalPositionSpeed: 3
+  OnBeginDrag:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEndDrag:
+    m_PersistentCalls:
+      m_Calls: []
   mousePosDeltaOnInitiateDrag: {x: 0, y: 0}
   lastLegalPosition: {x: 0, y: 0, z: 0}
   CurrentlyDraggedObject: {fileID: 0}
+  _currentlyDragging: 0
 --- !u!114 &850584143467601861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,7 +328,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1.29
   Loop: 0
   Mute: 0
